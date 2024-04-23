@@ -1,41 +1,40 @@
-describe('BmiForm Component', () => {
+describe('FinancialForm Component', () => {
   beforeEach(() => {
     cy.visit('/');
   });
 
   it('accepts input', () => {
-    const weight = '50';
-    const height = '176';
+    const amount = '50';
+    const category = 'Food';
 
-    cy.get('#weight')
-      .type(weight)
-      .should('have.value', weight);
-    cy.get('#height')
-      .type(height)
-      .should('have.value', height);
+    cy.get('#amount')
+      .type(amount)
+      .should('have.value', amount);
+    cy.get('#category')
+      .type(category)
+      .should('have.value', category);
   });
 
   context('Form submission', () => {
-    it('Adds a new bmi card data', () => {
-      let weight = '50';
-      const height = '176';
+    it('Adds a new financial card data', () => {
+      let amount = '50';
+      const category = 'Food';
       let today = new Date().toLocaleString().split(',')[0];
 
-      cy.get('#weight')
-        .type(weight)
-        .should('have.value', weight);
-      cy.get('#height')
-        .type(height)
-        .should('have.value', height);
+      cy.get('#amount')
+        .type(amount)
+        .should('have.value', amount);
+      cy.get('#category')
+        .type(category)
+        .should('have.value', category);
 
-      cy.get('#bmi-btn').click();
-      cy.get('#weight').should('have.value', '');
-      cy.get('#height').should('have.value', '');
+      cy.get('#financial-btn').click();
+      cy.get('#amount').should('have.value', '');
+      cy.get('#category').should('have.value', '');
 
-      cy.get("[data-test='weight']").should('contain', weight);
-      cy.get("[data-test='height']").should('contain', height);
-      cy.get("[data-test='bmi']").should('contain', '16.14');
+      cy.get("[data-test='amount']").should('contain', amount);
+      cy.get("[data-test='category']").should('contain', category);
       cy.get("[data-test='date']").should('contain', today);
     });
   });
-});
+})

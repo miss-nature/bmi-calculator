@@ -10,7 +10,7 @@ describe("Bar component", () => {
   let wrapper;
   const prop = {
     labelData: ["27/10/2019"],
-    bmiData: ["16.14"]
+    amountData: ["16.14"]
   };
 
   beforeEach(() => {

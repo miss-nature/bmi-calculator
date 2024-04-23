@@ -2,7 +2,7 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
 
-const Bar = ({ labelData, bmiData }) => {
+const Bar = ({ labelData, amountData }) => {
   const data = canvas => {
     const ctx = canvas.getContext('2d');
     const gradient = ctx.createLinearGradient(63, 81, 181, 700);
@@ -13,8 +13,8 @@ const Bar = ({ labelData, bmiData }) => {
       labels: labelData,
       datasets: [
         {
-          label: 'BMI',
-          data: bmiData,
+          label: 'Daily Spending',
+          data: amountData,
           backgroundColor: gradient,
           borderColor: '#3F51B5',
           pointRadius: 6,
@@ -51,7 +51,7 @@ const Bar = ({ labelData, bmiData }) => {
         {
           scaleLabel: {
             display: true,
-            labelString: 'BMI',
+            labelString: 'Daily Spending',
             fontSize: 18,
             fontColor: 'white'
           },
@@ -82,7 +82,7 @@ const Bar = ({ labelData, bmiData }) => {
 
 Bar.propTypes = {
   labelData: PropTypes.array,
-  bmiData: PropTypes.array
+  amountData: PropTypes.array
 };
 
 export default Bar;

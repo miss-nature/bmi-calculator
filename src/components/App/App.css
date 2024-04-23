@@ -1,10 +1,10 @@
 body {
-  background-color: #172b4d;
+  background-color: #f0f0f0; /* Light gray background color */
 }
 
 input {
-  background-color: #fff !important;
-  border-radius: 44px !important;
+  background-color: white !important;
+  border-radius: 4px !important;
   width: 90% !important;
   padding: 0px 15px !important;
 }
@@ -16,7 +16,7 @@ input:focus {
 
 label {
   display: block;
-  color: #fff !important;
+  color: #333 !important;
   font-size: 1rem !important;
 }
 
@@ -25,7 +25,7 @@ label {
   padding: 15px 50px;
   color: white;
   font-size: 16px;
-  border-radius: 44px;
+  border-radius: 4px;
   cursor: pointer;
   border: 1px solid #3f51b5;
   margin-bottom: 40px;
@@ -37,7 +37,7 @@ label {
   background-color: #fff;
   transform: translate(0px, -2px);
   color: #5364c3;
-  box-shadow: 0px 15px 30px -12px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 15px 30px -12px rgba(0, 0, 0, 0.2);
 }
 
 .calculate-btn:focus {
@@ -61,16 +61,17 @@ label {
 }
 
 .data-container {
-  background-color: #1f3a67;
+  background-color: white;
   border-radius: 11px;
   margin-top: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .card {
-  background-color: #274881 !important;
-  color: white;
+  background-color: #f5f5f5 !important;
+  color: #333;
 }
 
 .card-title {

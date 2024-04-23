@@ -5,11 +5,10 @@ import Info from "./Info";
 describe("Info Component", () => {
   let wrapper;
   const props = {
-    weight: "50",
-    height: "176",
+    amount: "50",
+    category: "Food",
     id: "2b926f1b-db1f-45ac-af87-2130da1e1a2f",
     date: "10/25/2019",
-    bmi: "16.14",
     deleteCard: jest.fn()
   };
   beforeEach(() => {
@@ -21,14 +20,10 @@ describe("Info Component", () => {
   });
 
   it("renders with props", () => {
-    expect(wrapper.find("[data-test='bmi']").text()).toEqual("BMI: 16.14");
+    expect(wrapper.find("[data-test='amount']").text()).toEqual("Amount: $50");
 
-    expect(wrapper.find("[data-test='weight']").text()).toEqual(
-      "Weight: 50 kg"
-    );
-
-    expect(wrapper.find("[data-test='height']").text()).toEqual(
-      "Height: 176 cm"
+    expect(wrapper.find("[data-test='category']").text()).toEqual(
+      "Category: Food"
     );
 
     expect(wrapper.find("[data-test='date']").text()).toEqual(
@@ -41,4 +36,4 @@ describe("Info Component", () => {
 
     expect(props.deleteCard).toHaveBeenCalledTimes(1);
   });
-});
+})
